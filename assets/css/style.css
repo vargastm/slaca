@@ -240,14 +240,16 @@ main h1 {
   text-align: end;
 }
 
-.details {
+.case {
   border: solid 1px #ECECEC;
   border-radius: 3px;
+}
+
+.details {
   height: calc(100% - 75px);
   width: 242px;
 }
-
-.details h2 {
+.case h2 {
   color: #4E4E4E;
   font: 500 1.25rem "Roboto", sans-serif;
   padding: 11px 15px;
@@ -258,6 +260,7 @@ main h1 {
 .details ul {
   margin: 0px 15px 15px 15px;
 }
+
 .details ul:first-of-type li {
   font: 400 0.75rem "Quicksand", sans-serif;
   color: #5C5C5C;
@@ -284,4 +287,116 @@ main h1 {
 .details ul sup, .details ul:last-of-type {
   color: #ADA0A0;
   font: 400 0.75rem "Quicksand", sans-serif;
+}
+
+/* RESUME */
+.resume, .discussions{
+  flex-direction: column;
+}
+
+.resume p {
+  margin: 0 15px 35px 15px;
+  font: 400 0.875rem "Quicksand", sans-serif;
+  color: #5C5C5C;
+}
+
+/* DISCUSSIONS */
+.discussions h3 {
+  color: #ED7839;
+  font: 700 1.125rem "Roboto", sans-serif;
+  margin-bottom: 27px;
+}
+
+.ideas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ideas div img:nth-child(2) {
+  margin: 0 50px;
+}
+
+.ideas p {
+  font: 400 0.875rem "Quicksand", sans-serif;
+  color: #595959;
+  margin-bottom: 14px;
+  margin-top: 35px;
+  max-width: 70%;
+  text-align: center;
+}
+
+.ideas button {
+  background: linear-gradient(180deg, #FFB354 0%, #EE7A3A 100%);
+  border: none;
+  color: #FFFFFF;
+  font: 700 0.9375rem "Quicksand", sans-serif;
+  height: 32px;
+  width: 133px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px 0px #0000003D;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 13px;
+}
+
+.ideas button img {
+  position: absolute;
+  left: 14px;
+  top: 8px;
+}
+
+/* QUESTIONS */ 
+.question {
+  margin: 2px 15px 15px 15px;
+  border: solid 1px #E7E7E7;
+  border-radius: 4px;
+  box-shadow: 0px 0px 8px 0px #0000001F;
+  padding: 18px 24px;
+}
+
+.question h3 {
+  font: 700 1rem "Quicksand", sans-serif;
+  margin: 0;
+}
+
+.question p:nth-child(2) {
+  color: #5C5C5C;
+  font: 500 0.75rem "Quicksand", sans-serif;
+}
+
+.question p:nth-child(3) {
+  color: #4D4D4D;
+  font: 400 0.875rem "Quicksand", sans-serif;
+  margin: 10px 0;
+}
+
+.question button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.question button:nth-of-type(2) {
+  background: #ED7839;
+  color: #FFFFFF;
+  height: 19px;
+  width: 27px;
+  border-radius: 2px;
+}
+
+.question div {
+  display: flex;
+  gap: 15px;
+}
+
+.question a {
+  color: #757575;
+  font: 350 0.875rem "Segoe UI", "Quicksand", sans-serif;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 65px;
+  margin-left: 15px;
 }
