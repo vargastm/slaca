@@ -13,7 +13,7 @@
   <body>
     <section class="layout">
       <aside id="sidebar">
-        <div id="logo"><a href="#">SLACA 2019</a></div>
+        <div id="logo"><a href="#">SLACA 2019</a><span onclick="mobileMenu()"><i class="fa-solid fa-2x fa-bars"></i></span></div>
         <div><img src="assets/images/eventLogo.png" alt="Logo do evento 13 SLACA"/></div>
         <nav>
           <ul>
@@ -54,6 +54,18 @@
               </div>
             </div>
           </div>
+          <div id="modal" class="modal">
+            <nav>
+              <ul>
+                <li><a href="/">Apresentação</a></li>
+                <li><a href="/">Comitês</a></li>
+                <li><a href="/">Autores</a></li>
+                <li><a href="/">Eixos temáticos</a></li>
+                <li><a href="/">Trabalhos</a></li>
+                <li><a href="/">Contato</a></li>
+              </ul>
+            </nav>
+          </div>
         </header>
         <main>
           <section class="layout container">
@@ -68,7 +80,7 @@
               </video>
             </div>
             <div class="post-info">
-              <div>
+              <div class="quote">
                 <div class="buttons">
                   <button><i class="fa-solid fa-download"></i> Download</button>
                   <button><i class="fa-solid fa-star"></i></button>

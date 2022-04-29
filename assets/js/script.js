@@ -27,3 +27,7 @@ function newComment() {
   document.getElementById('newTopic').style.display = 'block'
   document.getElementById('form').style.display = 'none'
 }
+
+function mobileMenu() {
+  document.getElementById('modal').style.display = 'flex'
+}
