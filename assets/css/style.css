@@ -159,7 +159,7 @@ header img {
 
 .language::before {
   content: '';
-  	background: no-repeat url(/assets/images/icons/globe.png);
+  	background: no-repeat url(../images/icons/globe.png);
 		position: absolute;
 		top: 6px;
 		left: 4px;
@@ -298,12 +298,16 @@ main h1 {
   margin: 0 15px 35px 15px;
   font: 400 0.875rem "Quicksand", sans-serif;
   color: #5C5C5C;
+}
+
+#seeMore {
   display: none;
 }
 
-.resume span {
+#seeMoreButton {
   color: #ED7839;
   font: 700 0.875rem "Quicksand", sans-serif;
+  cursor: pointer;
 }
 
 .resume .visible {
@@ -337,7 +341,7 @@ main h1 {
   text-align: center;
 }
 
-.ideas button {
+.ideas button, #newTopicSuccess button {
   background: linear-gradient(180deg, #FFB354 0%, #EE7A3A 100%);
   border: none;
   color: #FFFFFF;
@@ -350,9 +354,10 @@ main h1 {
   padding-left: 20px;
   margin-bottom: 13px;
   z-index: 1;
+  cursor: pointer;
 }
 
-.ideas::after {
+.ideas::after, #newTopicSuccess::after {
   content: '';
   height: 1px;
   width: calc(100% - 30px);
@@ -367,7 +372,64 @@ main h1 {
   top: 8px;
 }
 
+#newTopicSuccess {
+  display: none;
+  flex-direction: column;
+  align-items: center;  
+  position: relative;
+}
+
+#newTopicSuccess h3 {
+  margin-bottom: 18px;
+}
+
+#newTopicSuccess p {
+  font: 400 0.875rem "Quicksand", sans-serif;
+  margin-bottom: 29px;
+}
+
+#newTopicSuccess a, #overlay a {
+  font: 500 0.875rem "Quicksand", sans-serif;
+  color: #F48F44;
+  text-decoration: underline;
+  margin-bottom: 47px;
+}
+
+#newTopicSuccess button {
+  width: 20%;
+  padding-left: 0;
+  margin: 0 auto 14px auto;
+}
 /* QUESTIONS */ 
+#newTopic {
+  display: none;
+  position: relative;
+}
+
+#newTopic .info-question, #newTopic .links {
+  filter: blur(8px);
+}
+
+#overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #DDDDDD;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+#overlay i, #overlay h3 {
+  color: #707070;
+}
+
+#overlay a {
+  margin-bottom: 0;
+}
+
 .question {
   margin: 2px 15px 15px 15px;
   border: solid 1px #E7E7E7;
@@ -423,15 +485,15 @@ main h1 {
   font: 350 0.875rem "Segoe UI", "Quicksand", sans-serif;
 }
 
-.more-answers {
+.more-answers  {
   flex-direction: column;
+  display: none;
 }
 
 .more-answers div {
   flex-direction: column;
   padding: 18px 24px;
   border-top: 1px solid #F8F8F8;
-  /* display: none;*/
 }
 
 .question .more-answers div p {
@@ -457,6 +519,70 @@ main h1 {
 
 .autor {
   background: #E7E7E7;
+}
+
+/* FORM */
+#form {
+  width: 100%;
+  display: none;
+}
+
+form {
+  margin: 15px;
+}
+
+#form label {
+  color: #ED7839;
+  font: 700 1rem "Roboto", sans-serif;
+}
+
+#form p {
+  max-width: 100%;
+  margin: 0 0 22px 0;
+  font: 400 0.875rem "Quicksand", sans-serif;
+  text-align: center;
+  color: #5C5C5C;
+}
+
+.form-subject {
+  display: flex;
+  flex-direction: column;
+}
+
+#subject, form textarea {
+  padding: 10px 24px;
+  font: 400 0.875rem "Quicksand", sans-serif;
+}
+
+#subject {
+  margin-bottom: 10px;
+}
+
+.form-options input {
+  background: linear-gradient(180deg, #FEB154 0%, #F1833E 100%);
+  border: none;
+  color: #FFFFFF;
+  font: 700 0.9375rem "Quicksand", sans-serif;
+  height: 32px;
+  width: 20%;
+  border-radius: 0 0 4px 0px;
+  cursor: pointer;
+}
+
+.form-options {
+  display: flex;
+}
+
+.form-options div {
+  background: #EAF1F2;
+  width: 80%;
+  border: 1px solid #CCCCCC;
+  border-bottom-left-radius: 4px;
+  padding-left: 24px;
+}
+
+.form-options div img {
+  margin: 10px 30px 0 0;
 }
 
 /* FOOTER */

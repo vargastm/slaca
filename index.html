@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/56f393793a.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
   </head>
   <body>
     <section class="layout">
@@ -61,8 +62,8 @@
               <video 
                 controls muted 
                 id="player-video" 
-                src="/assets/videos/video.mp4" 
-                poster="/assets/images/poster.jpeg" 
+                src="assets/videos/video.mp4" 
+                poster="assets/images/poster.jpeg" 
                 type="video/mp4">
               </video>
             </div>
@@ -71,7 +72,7 @@
                 <div class="buttons">
                   <button><i class="fa-solid fa-download"></i> Download</button>
                   <button><i class="fa-solid fa-star"></i></button>
-                  <button><img src="/assets/images/icons/doi.svg" alt="Incone Doi"></button>
+                  <button><img src="assets/images/icons/doi.svg" alt="Incone Doi"></button>
                 </div>
                 <h3>COMO CITAR ESSE TRABALHO?</h3>
               </div>
@@ -104,41 +105,75 @@
               <h2>Resumo</h2>
               <p class="visible">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae turpis auctor, mollis felis ut, commodo turpis. Phasellus felis mauris, egestas eget cursus et, iaculis quis lacus. Fusce auctor eros sed magna ultricies gravida. Etiam aliquam dictum nisl, vel aliquet enim accumsan sit amet. Donec finibus nisi tellus, ut viverra lorem vestibulum ut. Phasellus condimentum orci id leo condimentum lobortis et non lorem. Sed id nisl metus. Quisque sollicitudin ligula in sapien scelerisque, ac gravida eros vestibulum...
-                <span>ver mais</span>
+                <span id="seeMoreButton" onclick="seeMore()">ver mais</span>
               </p>
-              <p>
-                Fusce vitae luctus dui. Donec id euismod mauris, in volutpat urna. Proin dapibus consequat feugiat. Proin dictum justo arcu, quis vestibulum augue lacinia quis. Sed dignissim dui nulla, ut faucibus mauris sodales id. Aliquam erat volutpat. Maecenas dolor enim, tincidunt id elit non, suscipit interdum turpis. Etiam finibus urna libero, eget interdum eros volutpat ullamcorper. Pellentesque et pretium lorem. Aenean interdum quis diam ac porttitor. Cras nec ipsum pulvinar, pharetra libero non, ornare enim. Etiam in laoreet odio.
-              </p>
-              <p> 
-                Nam eget tristique elit, at fermentum tellus. Mauris scelerisque ligula id eleifend feugiat. Donec eleifend vehicula sem nec dapibus. Integer scelerisque neque dui, in lacinia erat molestie eu. Phasellus maximus dui eget lacus porta tempor. Ut ex nibh, dignissim quis purus semper, efficitur facilisis turpis. Praesent blandit elementum ultricies. Aliquam sit amet enim sit amet nulla pulvinar lobortis consectetur non odio. Phasellus at lacus hendrerit, vulputate nisi sit amet, viverra mauris. Etiam eu scelerisque orci. Quisque sagittis, mi vitae pharetra iaculis, orci elit eleifend massa, eu posuere mauris odio id odio. Morbi eu libero luctus, consectetur lorem vel, interdum sapien. Aenean in porta arcu. Maecenas eu maximus massa.
-              </p>
-              <p> 
-                Praesent velit dolor, dignissim sed quam ac, efficitur porta justo. Pellentesque porta pharetra felis ut hendrerit. Nulla facilisi. Aliquam erat volutpat. Nunc sit amet faucibus quam. Maecenas dapibus luctus dolor at viverra. Duis nec fringilla libero. Duis risus nibh, viverra ac orci nec, iaculis dictum sem. Aliquam at malesuada arcu. Aliquam erat volutpat. Donec varius ipsum purus, ut vehicula purus placerat vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              </p>
+              <div id="seeMore" onclick="hideText()">
+                <p>
+                  Fusce vitae luctus dui. Donec id euismod mauris, in volutpat urna. Proin dapibus consequat feugiat. Proin dictum justo arcu, quis vestibulum augue lacinia quis. Sed dignissim dui nulla, ut faucibus mauris sodales id. Aliquam erat volutpat. Maecenas dolor enim, tincidunt id elit non, suscipit interdum turpis. Etiam finibus urna libero, eget interdum eros volutpat ullamcorper. Pellentesque et pretium lorem. Aenean interdum quis diam ac porttitor. Cras nec ipsum pulvinar, pharetra libero non, ornare enim. Etiam in laoreet odio.
+                </p>
+                <p> 
+                  Nam eget tristique elit, at fermentum tellus. Mauris scelerisque ligula id eleifend feugiat. Donec eleifend vehicula sem nec dapibus. Integer scelerisque neque dui, in lacinia erat molestie eu. Phasellus maximus dui eget lacus porta tempor. Ut ex nibh, dignissim quis purus semper, efficitur facilisis turpis. Praesent blandit elementum ultricies. Aliquam sit amet enim sit amet nulla pulvinar lobortis consectetur non odio. Phasellus at lacus hendrerit, vulputate nisi sit amet, viverra mauris. Etiam eu scelerisque orci. Quisque sagittis, mi vitae pharetra iaculis, orci elit eleifend massa, eu posuere mauris odio id odio. Morbi eu libero luctus, consectetur lorem vel, interdum sapien. Aenean in porta arcu. Maecenas eu maximus massa.
+                </p>
+                <p> 
+                  Praesent velit dolor, dignissim sed quam ac, efficitur porta justo. Pellentesque porta pharetra felis ut hendrerit. Nulla facilisi. Aliquam erat volutpat. Nunc sit amet faucibus quam. Maecenas dapibus luctus dolor at viverra. Duis nec fringilla libero. Duis risus nibh, viverra ac orci nec, iaculis dictum sem. Aliquam at malesuada arcu. Aliquam erat volutpat. Donec varius ipsum purus, ut vehicula purus placerat vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                </p>
+              </div>
             </div>
           </section>
           <section>
             <div class="discussions case container">
                 <h2>Discussões</h2>
-                <div class="ideas">
+                <div class="ideas" id="ideas">
                   <h3>Compartilhe suas ideias ou dúvidas com os autores!</h3>
                   <div>
-                    <img src="/assets/images/icons/icon1.svg" alt="Icone 1">
-                    <img src="/assets/images/icons/icon2.svg" alt="Icone 2">
-                    <img src="/assets/images/icons/icon3.svg" alt="Icone 3">
+                    <img src="assets/images/icons/icon1.svg" alt="Icone 1">
+                    <img src="assets/images/icons/icon2.svg" alt="Icone 2">
+                    <img src="assets/images/icons/icon3.svg" alt="Icone 3">
                   </div>
                   <p>Sabia que o maior estímulo no desenvolvimento científico e cultural é a curiosidade? Deixe seus questionamentos ou sugestões para o autor!</p>
-                  <button><img src="/assets/images/icons/plus.svg" alt="Simbolo de Adição">criar tópico</button>
+                  <button onclick="newTopic()"><img src="assets/images/icons/plus.svg" alt="Simbolo de Adição">criar tópico</button>
+                </div>
+                <div id="form">
+                  <form>
+                    <p>Tem uma dúvida ou sugestão? Compartilhe seu feedback com os autores!</p>
+                    <div class="form-subject">
+                      <label>Assunto</label>
+                      <input type="text" name="subject" id="subject" placeholder="Defina um tópico sucinto para notificar os autores..." >
+                    </div>
+                    <div class="form-subject">
+                      <label>Conteúdo</label>
+                      <textarea name="content" id="content" ></textarea>
+                      <div class="form-options">
+                        <div>
+                          <img src="assets/images/icons/bold.svg" alt="Icone de Negrito">
+                          <img src="assets/images/icons/italic.svg" alt="Icone de Italico">
+                        </div>
+                        <input type="button" value="Enviar" onclick="newComment()">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div id="newTopicSuccess">
+                  <h3>Seu tópico foi enviado com sucesso! :D</h3>
+                  <p>Agradecemos por sua contribuição, uma notificação será enviada ao seu email assim que seu tópico for respondido!</p>
+                  <a href="#">Descubra outros trabalhos!</a>
+                  <button onclick="newTopic()">criar novo tópico</button>
                 </div>
               <div class="questions">
-                <div class="question">
+                
+                <div id="newTopic" class="question">
+                  <div id="overlay">
+                    <i class="fa-solid fa-check-double"></i>
+                    <h3>Aguardando feedback dos autores</h3>
+                    <a href="#">Editar tópico</a>
+                  </div>
                   <div class="info-question">
                     <h3>Assunto da pergunta aparece aqui</h3>
                     <p>Carlos Henrique Santos</p>
                     <p>Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
                   </div>
                   <div class="links">
-                    <button><img src="/assets/images/icons/more.svg" alt="Mais informações"></button>
+                    <button><img src="assets/images/icons/more.svg" alt="Mais informações"></button>
                     <button><i class="fa-solid fa-heart"></i></button>
                     <a href="#">1 like</a>
                     <a href="#">1 resposta</a>
@@ -151,12 +186,27 @@
                     <p>Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
                   </div>
                   <div class="links">
-                    <button><img src="/assets/images/icons/more.svg" alt="Mais informações"></button>
+                    <button><img src="assets/images/icons/more.svg" alt="Mais informações"></button>
                     <button><i class="fa-solid fa-heart"></i></button>
-                    <a href="#">4 like</a>
-                    <a href="#">4 resposta</a>
+                    <a href="#">1 like</a>
+                    <a href="#">1 resposta</a>
                   </div>
-                  <div class="more-answers">
+                </div>
+                <div class="question">
+                  <div onclick="seeMoreAnswers()">
+                    <div class="info-question">
+                      <h3>Assunto da pergunta aparece aqui</h3>
+                      <p>Carlos Henrique Santos</p>
+                      <p>Comecinho da pergunta aparece aqui resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo...</p>
+                    </div>
+                    <div class="links">
+                      <button><img src="assets/images/icons/more.svg" alt="Mais informações"></button>
+                      <button><i class="fa-solid fa-heart"></i></button>
+                      <a href="#">4 like</a>
+                      <a href="#">4 resposta</a>
+                    </div>
+                  </div>
+                  <div id="moreAnswers" class="more-answers" onclick="hideMoreAnswers()">
                     <div class="autor">
                       <p>Adriano da Silva<span>Autor<i class="fa-solid fa-check-double"></i></span></p>
                       <p>Resposta do autor é aqui. Relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo resente relato inscreve-se no campo da análise da dimensão e impacto de processo formativo situado impacto de processo formativo processo.</p>
@@ -184,7 +234,7 @@
           </section>
         </main>
         <footer>
-          <img src="/assets/images/footer.png" alt="Galoá Footer">
+          <img src="assets/images/footer.png" alt="Galoá Footer">
         </footer>
       </section>
     </section>
