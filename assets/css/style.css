@@ -596,6 +596,8 @@ footer {
   margin-left: 15px;
 }
 
+
+/* MODAL */
 .modal {
   height: 100%;
   width: 100%;
@@ -627,11 +629,13 @@ footer {
   color: #DDDDDD;
 }
 
-footer img {
-  width: 100%;
+/*RESPONSIBILITY*/
+@media (max-width: 1400px) {
+  footer img {
+    width: 100%;
+  }
 }
 
-/*RESPONSIBILITY*/
 @media (max-width: 1300px) {
   .details {
     width: 90%;
